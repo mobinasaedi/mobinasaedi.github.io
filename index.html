@@ -30,12 +30,13 @@
       <nav class="nav-links" aria-label="Main">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
+        <a href="#supervisors" class="nav-cta">For Supervisors</a>
       </nav>
     </div>
   </header>
@@ -46,11 +47,12 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Computer Engineering Undergraduate</span>
+          <span class="seeking">Applying for a research-based MSc &middot; Fall 2028</span>
           <h1>Mobina Saedi</h1>
           <p class="tagline">Aspiring AI/ML researcher working on Natural Language Processing, Large Language Models and
             Explainable AI.</p>
           <div class="hero-actions">
-            <a href="#research" class="btn">View Research</a>
+            <a href="Orthographic_Variation_Persian_LLM_MCQA.pdf" class="btn" target="_blank" rel="noopener">Read my paper</a>
             <a href="Mobina_Saedi_Academic_CV.pdf" class="btn outline" download>Download CV</a>
           </div>
           <div class="socials">
@@ -76,6 +78,50 @@
           </div>
         </div>
         <div class="hero-card"><img src="portfolio.jpg" alt="Portrait of Mobina Saedi" width="640" height="640"></div>
+      </div>
+    </section>
+
+    <!-- FOR PROSPECTIVE SUPERVISORS -->
+    <section class="section sup" id="supervisors">
+      <div class="container">
+        <div class="sup-box reveal">
+          <div class="sup-head">
+            <span class="sup-badge">For prospective supervisors</span>
+            <h2>Applying for a research-based MSc, Fall 2028</h2>
+            <p>I want to work on NLP and large language models, especially for low-resource languages such as Persian,
+              and on explainable AI. If your group may take MSc students in 2028, these are the four things to check first.</p>
+          </div>
+          <div class="sup-grid">
+            <div class="sup-item">
+              <h3>1. My paper</h3>
+              <p>A paired study of how Persian spelling variants (Arabic and Persian yeh and kaf, ZWNJ) and input
+                normalization change LLM answers. Aggregate accuracy did not change, but individual answers did.
+                <em>Manuscript in preparation, not yet submitted.</em></p>
+              <a href="Orthographic_Variation_Persian_LLM_MCQA.pdf" target="_blank" rel="noopener">Read the paper (PDF) &rarr;</a>
+            </div>
+            <div class="sup-item">
+              <h3>2. My record</h3>
+              <p>GPA 18/20. 20/20 in my software project, my internship project, and Theory of Languages and Compilers;
+                17/20 in Algorithms. Expected graduation June 2027.</p>
+              <a href="Mobina_Saedi_Academic_CV.pdf" download>Download my CV &rarr;</a>
+            </div>
+            <div class="sup-item">
+              <h3>3. My code</h3>
+              <p>Three Python computer-vision projects, each with its source code on GitHub.</p>
+              <a href="#projects">See projects &rarr;</a>
+            </div>
+            <div class="sup-item">
+              <h3>4. Language tests</h3>
+              <p>IELTS and TCF are planned for Spring 2027. I have not been able to take IELTS yet because
+                sanctions on Iran restrict access to international testing.</p>
+              <a href="#certifications">See details &rarr;</a>
+            </div>
+          </div>
+          <div class="sup-cta">
+            <a class="btn accent" href="mailto:mobinasaaedi@gmail.com?subject=MSc%20Fall%202028%20-%20Mobina%20Saedi">Email me</a>
+            <span>mobinasaaedi@gmail.com</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -117,24 +163,35 @@
       </div>
     </section>
 
-    <!-- RESEARCH -->
-    <section class="section alt" id="research">
+    <!-- RESEARCH PUBLICATIONS -->
+    <section class="section alt" id="publications">
       <div class="container">
         <div class="section-title reveal">
-          <h2>Research</h2>
+          <h2>Research Publications</h2>
         </div>
         <article class="card reveal">
-          <h3>Persian NLP and Large Language Model Robustness Research</h3>
-          <p class="meta">Manuscript in Preparation &middot; Co-author: Mohammad Farshad Fazeli Sabzevar</p>
-          <p class="paper">Orthographic Variation and Input Normalization in Persian LLM Multiple-Choice Question
-            Answering: A Paired Pilot Protocol</p>
+          <h3>Orthographic Variation and Input Normalization in Persian LLM Multiple-Choice Question Answering: A Paired
+            Pilot Protocol</h3>
+          <p class="meta">Mobina Saedi*, Mohammad Farshad Fazeli Sabzevar* &middot; Islamic Azad University, Central
+            Tehran Branch &middot; *Co-corresponding authors</p>
+          <p>Persian allows several spellings of the same word, and a tokenizer reads them as different strings. This
+            paper asks each multiple-choice question under six conditions: as written, with a controlled spelling
+            change, and after each of two normalizers.</p>
           <ul class="bullets">
-            <li>Contributed to writing the research manuscript.</li>
-            <li>Designed a paired experimental protocol to investigate Persian orthographic variation and input
-              normalization in LLM multiple-choice question answering.</li>
-            <li>Implemented Python code to support the research workflow.</li>
+            <li>2,982 local requests on 97 yeh/kaf items and 69 ZWNJ items, with Qwen2.5-1.5B-Instruct (Q4_K_M) through
+              llama.cpp.</li>
+            <li>Item-majority accuracy was identical before and after the spelling change (46/97 and 32/69), yet some
+              individual answers flipped in both directions.</li>
+            <li>The paper states its limits: one small quantized model, author-approved items, and no evidence of
+              equivalence.</li>
           </ul>
-          <span class="status">Status: In preparation &ndash; not yet published or submitted</span>
+          <p class="meta" style="margin-bottom:12px">My contribution: writing the manuscript, designing the paired
+            protocol, and implementing the Python code.</p>
+          <div class="pub-actions">
+            <a class="btn" href="Orthographic_Variation_Persian_LLM_MCQA.pdf" target="_blank" rel="noopener">Read the
+              paper (PDF)</a>
+            <span class="status">Status: In preparation &ndash; not yet published or submitted</span>
+          </div>
         </article>
       </div>
     </section>
@@ -214,33 +271,28 @@
       <div class="container">
         <div class="section-title reveal">
           <h2>Projects</h2>
-          <p>Source code for these projects is on my GitHub.</p>
+          <p>Click a project to open its source code on GitHub.</p>
         </div>
         <div class="grid-3">
-          <a class="card project-card reveal" href="https://github.com/mobinasaedi" target="_blank" rel="noopener">
-            <div class="project-icon"><svg viewBox="0 0 24 24">
-                <rect x="3" y="4" width="18" height="17" rx="2" />
-                <path d="M8 2v4M16 2v4M3 10h18" />
-              </svg></div>
-            <h3>Age Calculator</h3>
+          <a class="card project-card reveal" href="https://github.com/mobinasaedi/license-plate-detection" target="_blank" rel="noopener">
+            <div class="project-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11h2M10 11h2M14 11h4M6 14h12"/></svg></div>
+            <h3>License Plate Detection</h3>
+            <p>Finds and outlines a possible license plate region in an image with classical computer vision: grayscale, noise reduction, Canny edges, contours, then filtering by aspect ratio and area. It is a heuristic baseline that localizes the region only.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span></div>
             <span class="link">View on GitHub &rarr;</span>
           </a>
-          <a class="card project-card reveal" href="https://github.com/mobinasaedi" target="_blank" rel="noopener">
-            <div class="project-icon"><svg viewBox="0 0 24 24">
-                <path d="M3 11l9-8 9 8" />
-                <path d="M5 10v10h14V10" />
-                <path d="M10 20v-6h4v6" />
-              </svg></div>
-            <h3>House Price Prediction</h3>
+          <a class="card project-card reveal" href="https://github.com/mobinasaedi/cat-detection-and-counting" target="_blank" rel="noopener">
+            <div class="project-icon"><svg viewBox="0 0 24 24"><circle cx="6" cy="9" r="2"/><circle cx="12" cy="6" r="2"/><circle cx="18" cy="9" r="2"/><path d="M12 11c-3 0-6 3-6 6 0 2 2 3 3 3 1 0 2-.7 3-.7s2 .7 3 .7c1 0 3-1 3-3 0-3-3-6-6-6z"/></svg></div>
+            <h3>Cat Detection and Counting</h3>
+            <p>Detects cats in an image with a pretrained YOLO model, counts the detections, and saves an annotated image. The confidence threshold can be set from the command line.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">OpenCV</span></div>
             <span class="link">View on GitHub &rarr;</span>
           </a>
-          <a class="card project-card reveal" href="https://github.com/mobinasaedi" target="_blank" rel="noopener">
-            <div class="project-icon"><svg viewBox="0 0 24 24">
-                <path d="M9 11V5a2 2 0 0 1 4 0v6" />
-                <path d="M13 9a2 2 0 0 1 4 0v3" />
-                <path d="M9 11a2 2 0 0 0-4 0v3a7 7 0 0 0 14 0v-2" />
-              </svg></div>
+          <a class="card project-card reveal" href="https://github.com/mobinasaedi/Air_Drawing" target="_blank" rel="noopener">
+            <div class="project-icon"><svg viewBox="0 0 24 24"><path d="M9 11V5a2 2 0 0 1 4 0v6"/><path d="M13 9a2 2 0 0 1 4 0v3"/><path d="M9 11a2 2 0 0 0-4 0v3a7 7 0 0 0 14 0v-2"/></svg></div>
             <h3>Air Drawing</h3>
+            <p>A touchless drawing application. MediaPipe tracks the hand in the webcam image, and finger gestures draw, erase, change color, clear the canvas or pause in real time. This was my internship project.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span></div>
             <span class="link">View on GitHub &rarr;</span>
           </a>
         </div>
@@ -265,7 +317,7 @@
           </div>
           <div class="card cert-card reveal">
             <h3>Programming with Python</h3>
-            <span class="issuer">Tehran Institue of Technology (Technical and Vocational Training Complex)</span>
+            <span class="issuer">Tehran Institute of Technology (Technical and Vocational Training Complex)</span>
             <span class="date">Issued 2024</span>
             <div class="cert-links"><button type="button" class="cert-view" data-img="certificate-python2.jpg"
                 data-title="Programming with Python &ndash; Mojtama Fanni">View certificate</button></div>
@@ -277,9 +329,9 @@
           </div>
         </div>
         <div class="langs reveal">
-          <div class="lang"><strong>English</strong><span>Preparing for IELTS<br>Target test date: Spring 2027</span>
+          <div class="lang"><strong>English &middot; C1 (self-assessed)</strong><span>Preparing for IELTS<br>Target test date: Spring 2027</span>
           </div>
-          <div class="lang"><strong>French &middot; B1</strong><span>Preparing for TCF<br>Target test date: Spring
+          <div class="lang"><strong>French &middot; B2 (self-assessed)</strong><span>Preparing for TCF<br>Target test date: Spring
               2027</span></div>
         </div>
       </div>
